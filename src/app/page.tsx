@@ -72,6 +72,7 @@ export default function Home() {
           headers: {
             "content-type": "text/json",
           },
+          timeout: 20000,
         }
       );
 
