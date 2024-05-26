@@ -1,7 +1,7 @@
 import { generateVacation } from "@/lib/agent";
 import { NextRequest, NextResponse } from "next/server";
 
-export const maxDuration = 300;
+export const maxDuration = 60;
 
 export const POST = async (req: NextRequest) => {
   try {
