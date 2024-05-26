@@ -63,12 +63,15 @@ export default function Home() {
 
       setLoading(true);
 
-      const response = await axios.post("/api/ai/ask", {
-        destination,
-        reason,
-        startDate,
-        endDate,
-      });
+      const response = await axios.post(
+        "/api/ai/ask",
+        {
+          destination,
+          reason,
+          startDate,
+          endDate,
+        },
+      );
 
       setLoading(false);
 
@@ -240,7 +243,7 @@ export default function Home() {
           <pre
             style={{ wordWrap: "break-word" }}
             className={cn(
-              "overflow-x-auto whitespace-pre-wrap font-rubik",
+              "overflow-x-auto whitespace-pre-wrap",
               inter.className
             )}
           >
@@ -258,6 +261,6 @@ export default function Home() {
           </div>
         )}
       </section>
-    </main>
+      </main>
   );
 }
